@@ -1,10 +1,10 @@
 var argv = require("argv");
 var _argv = argv.option([
   {
-    name: "inputFile",
+    name: "inputPath",
     short: "i",
     type: "path",
-    description: "JSON file path",
+    description: "JSON files root path",
     example: "'i18n-generate-xlsx --inputFile=value'"
   },
   {
@@ -27,8 +27,8 @@ var _argv = argv.option([
 var arguments = _argv.run();
 
 module.exports = {
-  inputFile: arguments.options.inputFile,
+  inputPath: arguments.options.inputPath,
   languages: arguments.options.languages,
-  outputFile: arguments.options.outputPath,
+  outputPath: arguments.options.outputPath,
   separator: arguments.options.separator
 };
